@@ -19,6 +19,14 @@
 #       (f (+ (* a (val x))
 #             (__getitem__ b i)))))
 #
+# In Python following is still a very valid expression:
+# ('if', ('>', ('val', 'x'), 0),
+#   ('let', z,
+#       ('f', ('+', ('*', 'a', ('val', 'x'))
+#             ('aref', 'b', 'i'),),),),)
+#
+# Python's list lend them selves very well to s-exprs!!!
+#
 
 global_env = None
 
